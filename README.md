@@ -19,7 +19,13 @@ Create a slopegraph as follows
 ```
 <slopegraph slopedata="slopeData" leftlabel="1970" rightlabel="1979" width="500" height="900"></slopegraph>
 ```
-slopeData refers to a scope variable that contains the data. The data must be a 2-dimensional array, where each element is a list of 4 elements: The input label and value, and the output label and value. Higher values will be displayed lower on the graph.
+slopeData refers to a scope variable that contains the data. The data must be a 2-dimensional array, where each element is a list of 4 elements: 
+- The left label
+- The value behind the left label
+- The right label
+- The value behind the right label
+
+Higher values will be displayed lower on the graph. For example, the example rendering above is backed by this data:
 
 ```javascript
 angular.module('myApp', ['ngSlopeGraph']).
